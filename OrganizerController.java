@@ -1,6 +1,6 @@
-package com.example.lab3.repository;
+package com.example.lab4.repository;
 
-import com.example.lab3.model.Hall;
+import com.example.lab4.model.Hall;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 

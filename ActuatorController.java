@@ -1,12 +1,12 @@
-package com.example.lab3.service;
+package com.example.lab4.service;
 
-import com.example.lab3.dto.request.EventRequestDto;
-import com.example.lab3.dto.response.EventResponseDto;
-import com.example.lab3.exception.BadRequestException;
-import com.example.lab3.exception.ResourceNotFoundException;
-import com.example.lab3.mapper.DtoMapper;
-import com.example.lab3.model.*;
-import com.example.lab3.repository.*;
+import com.example.lab4.dto.request.EventRequestDto;
+import com.example.lab4.dto.response.EventResponseDto;
+import com.example.lab4.exception.BadRequestException;
+import com.example.lab4.exception.ResourceNotFoundException;
+import com.example.lab4.mapper.DtoMapper;
+import com.example.lab4.model.*;
+import com.example.lab4.repository.*;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

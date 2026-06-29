@@ -1,6 +1,6 @@
-package com.example.lab3.repository;
+package com.example.lab4.repository;
 
-import com.example.lab3.model.Organizer;
+import com.example.lab4.model.Organizer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 

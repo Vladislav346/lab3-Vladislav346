@@ -1,26 +1,23 @@
-package com.example.lab3.controller;
+package com.example.lab4.controller;
 
+import com.example.lab4.dto.response.EventResponseDto;
+import com.example.lab4.service.BuildingService;
+import com.example.lab4.service.EventService;
+import com.example.lab4.service.HallService;
+import com.example.lab4.service.OrganizerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/actuator")
-public class ActuatorController {
-    @GetMapping("/health")
-    public ResponseEntity<Map<String, String>> health() {
-        return ResponseEntity.ok(Map.of("status", "UP", "service", "lab3-ai-244-tkachenko"));
-    }
-
-    @GetMapping("/metrics")
-    public ResponseEntity<List<String>> metrics() {
-        return ResponseEntity.ok(List.of("http.server.requests", "jvm.memory.used", "process.uptime"));
-    }
-
-    @GetMapping("/prometheus")
-    public ResponseEntity<String> prometheus() {
-        return ResponseEntity.ok("service_status 1\nservice_time \"" + LocalDateTime.now() + "\"");
-    }
+@RequestMapping("/analytics")
+public class AnalyticsController {
+    private final EventService eventService; private final OrganizerService organizerService; private final HallService hallService; private final BuildingService buildingService;
+    public AnalyticsController(EventService eventService, OrganizerService organizerService, HallService hallService, BuildingService buildingService) { this.eventService = eventService; this.organizerService = organizerService; this.hallService = hallService; this.buildingService = buildingService; }
+    @GetMapping("/events/count") public ResponseEntity<Long> eventsCount() { return ResponseEntity.ok(eventService.count()); }
+    @GetMapping("/organizers/count") public ResponseEntity<Long> organizersCount() { return ResponseEntity.ok(organizerService.count()); }
+    @GetMapping("/events/active") public ResponseEntity<List<EventResponseDto>> activeEvents() { return ResponseEntity.ok(eventService.getActive()); }
+    @GetMapping("/halls/by-capacity") public ResponseEntity<Map<String, Long>> hallsByCapacity() { return ResponseEntity.ok(hallService.countByCapacity()); }
+    @GetMapping("/buildings/workload") public ResponseEntity<Map<String, Long>> buildingsWorkload() { return ResponseEntity.ok(buildingService.workload()); }
 }

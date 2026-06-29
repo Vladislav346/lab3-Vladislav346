@@ -1,15 +1,15 @@
-package com.example.lab3.service;
+package com.example.lab4.service;
 
-import com.example.lab3.dto.request.BuildingRequestDto;
-import com.example.lab3.dto.response.BuildingResponseDto;
-import com.example.lab3.dto.response.EventResponseDto;
-import com.example.lab3.dto.response.HallResponseDto;
-import com.example.lab3.exception.ResourceNotFoundException;
-import com.example.lab3.mapper.DtoMapper;
-import com.example.lab3.model.Building;
-import com.example.lab3.repository.BuildingRepository;
-import com.example.lab3.repository.EventRepository;
-import com.example.lab3.repository.HallRepository;
+import com.example.lab4.dto.request.BuildingRequestDto;
+import com.example.lab4.dto.response.BuildingResponseDto;
+import com.example.lab4.dto.response.EventResponseDto;
+import com.example.lab4.dto.response.HallResponseDto;
+import com.example.lab4.exception.ResourceNotFoundException;
+import com.example.lab4.mapper.DtoMapper;
+import com.example.lab4.model.Building;
+import com.example.lab4.repository.BuildingRepository;
+import com.example.lab4.repository.EventRepository;
+import com.example.lab4.repository.HallRepository;
 import org.springframework.stereotype.Service;
 import java.util.LinkedHashMap;
 import java.util.List;

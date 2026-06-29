@@ -1,7 +1,7 @@
-package com.example.lab3.repository;
+package com.example.lab4.repository;
 
-import com.example.lab3.model.Event;
-import com.example.lab3.model.EventStatus;
+import com.example.lab4.model.Event;
+import com.example.lab4.model.EventStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 

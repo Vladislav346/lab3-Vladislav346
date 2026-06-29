@@ -1,6 +1,6 @@
-package com.example.lab3.repository;
+package com.example.lab4.repository;
 
-import com.example.lab3.model.Equipment;
+import com.example.lab4.model.Equipment;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EquipmentRepository extends JpaRepository<Equipment, Long> {

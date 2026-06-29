@@ -1,4 +1,4 @@
-package com.example.lab3.model;
+package com.example.lab4.model;
 
 public enum EventStatus {
     PLANNED,
